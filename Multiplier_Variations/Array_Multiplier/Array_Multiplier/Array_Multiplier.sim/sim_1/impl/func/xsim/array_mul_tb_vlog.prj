@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"array_mul_tb_func_impl.v" \
-"../../../../../../array_mul_tb_2.v" \
-
-# Do not sort compile order
-nosort

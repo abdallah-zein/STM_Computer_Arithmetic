@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/STM/Lab3/Array_Multiplier/array_mul.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module array_mul
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/STM/Lab3/Array_Multiplier/full_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module full_adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User/Desktop/STM/Lab3/Array_Multiplier/array_mul_tb_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module array_mul_tb
