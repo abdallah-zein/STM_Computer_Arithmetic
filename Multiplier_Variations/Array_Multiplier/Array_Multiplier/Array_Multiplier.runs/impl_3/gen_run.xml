@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_3" LaunchPart="xc7k70tlfbv676-2L" LaunchTime="1744316984">
+  <File Type="BITSTR-BMM" Name="array_mul_bd.bmm"/>
+  <File Type="ROUTE-PWR" Name="array_mul_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="array_mul.tcl"/>
+  <File Type="OPT-DCP" Name="array_mul_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="array_mul_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="array_mul_reports.tcl"/>
+  <File Type="OPT-DRC" Name="array_mul_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="array_mul.hwdef"/>
+  <File Type="PWROPT-DCP" Name="array_mul_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="array_mul_placed.dcp"/>
+  <File Type="PLACE-IO" Name="array_mul_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="array_mul_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="array_mul_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="array_mul_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="array_mul_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="array_mul.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="array_mul_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="array_mul.bin"/>
+  <File Type="PHYSOPT-DCP" Name="array_mul_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="array_mul.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="array_mul_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="array_mul_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="array_mul_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="array_mul_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="array_mul_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="array_mul.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="array_mul_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="array_mul.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="array_mul_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="array_mul_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="array_mul.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="array_mul_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="array_mul_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="array_mul_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="array_mul_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="array_mul_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="array_mul_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="array_mul_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="array_mul.vdi"/>
+  <File Type="ROUTE-CLK" Name="array_mul_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="array_mul_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="array_mul_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="array_mul_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="array_mul_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="array_mul_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="array_mul.bit"/>
+  <File Type="BITSTR-RBT" Name="array_mul.rbt"/>
+  <File Type="BITSTR-NKY" Name="array_mul.nky"/>
+  <File Type="BG-DRC" Name="array_mul.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../full_adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../array_mul.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="array_mul"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

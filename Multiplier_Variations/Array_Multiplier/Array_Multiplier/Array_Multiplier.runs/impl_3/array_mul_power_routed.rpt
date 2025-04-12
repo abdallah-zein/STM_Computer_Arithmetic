@@ -1,0 +1,1198 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Thu Apr 10 22:31:17 2025
+| Host             : LAPTOP-QPLCJ70D running 64-bit major release  (build 9200)
+| Command          : report_power -file array_mul_power_routed.rpt -pb array_mul_power_summary_routed.pb -rpx array_mul_power_routed.rpx
+| Design           : array_mul
+| Device           : xc7k70tlfbv676-2L
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 103.426 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 102.668                           |
+| Device Static (W)        | 0.758                             |
+| Effective TJA (C/W)      | 1.9                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |    24.216 |     3138 |       --- |             --- |
+|   LUT as Logic |    24.216 |     2624 |     41000 |            6.40 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |    19.943 |     3198 |       --- |             --- |
+| I/O            |    58.509 |      128 |       300 |           42.67 |
+| Static Power   |     0.758 |          |           |                 |
+| Total          |   103.426 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       0.900 |    50.000 |      49.321 |      0.678 |
+| Vccaux    |       1.800 |     4.822 |       4.771 |      0.051 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |    27.607 |      27.606 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       0.900 |     0.020 |       0.000 |      0.020 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------+-----------+
+| Name                         | Power (W) |
++------------------------------+-----------+
+| array_mul                    |   102.668 |
+|   genblk1[0].genblk1[0].fa   |     0.003 |
+|   genblk1[0].genblk1[10].fa  |     0.004 |
+|   genblk1[0].genblk1[11].fa  |     0.002 |
+|   genblk1[0].genblk1[12].fa  |     0.003 |
+|   genblk1[0].genblk1[13].fa  |     0.003 |
+|   genblk1[0].genblk1[14].fa  |     0.003 |
+|   genblk1[0].genblk1[15].fa  |     0.002 |
+|   genblk1[0].genblk1[16].fa  |     0.002 |
+|   genblk1[0].genblk1[17].fa  |     0.002 |
+|   genblk1[0].genblk1[18].fa  |     0.003 |
+|   genblk1[0].genblk1[19].fa  |     0.004 |
+|   genblk1[0].genblk1[1].fa   |     0.003 |
+|   genblk1[0].genblk1[20].fa  |     0.002 |
+|   genblk1[0].genblk1[21].fa  |     0.003 |
+|   genblk1[0].genblk1[22].fa  |     0.002 |
+|   genblk1[0].genblk1[23].fa  |     0.002 |
+|   genblk1[0].genblk1[24].fa  |     0.002 |
+|   genblk1[0].genblk1[25].fa  |     0.003 |
+|   genblk1[0].genblk1[26].fa  |     0.002 |
+|   genblk1[0].genblk1[27].fa  |     0.003 |
+|   genblk1[0].genblk1[28].fa  |     0.003 |
+|   genblk1[0].genblk1[29].fa  |     0.003 |
+|   genblk1[0].genblk1[2].fa   |     0.003 |
+|   genblk1[0].genblk1[30].fa  |     0.003 |
+|   genblk1[0].genblk1[31].fa  |     0.003 |
+|   genblk1[0].genblk1[3].fa   |     0.002 |
+|   genblk1[0].genblk1[4].fa   |     0.003 |
+|   genblk1[0].genblk1[5].fa   |     0.002 |
+|   genblk1[0].genblk1[6].fa   |     0.003 |
+|   genblk1[0].genblk1[7].fa   |     0.002 |
+|   genblk1[0].genblk1[8].fa   |     0.002 |
+|   genblk1[0].genblk1[9].fa   |     0.003 |
+|   genblk1[10].genblk1[0].fa  |     0.080 |
+|   genblk1[10].genblk1[10].fa |     0.041 |
+|   genblk1[10].genblk1[11].fa |     0.050 |
+|   genblk1[10].genblk1[12].fa |     0.048 |
+|   genblk1[10].genblk1[13].fa |     0.035 |
+|   genblk1[10].genblk1[14].fa |     0.038 |
+|   genblk1[10].genblk1[15].fa |     0.060 |
+|   genblk1[10].genblk1[16].fa |     0.060 |
+|   genblk1[10].genblk1[17].fa |     0.050 |
+|   genblk1[10].genblk1[18].fa |     0.032 |
+|   genblk1[10].genblk1[19].fa |     0.058 |
+|   genblk1[10].genblk1[1].fa  |     0.041 |
+|   genblk1[10].genblk1[20].fa |     0.047 |
+|   genblk1[10].genblk1[21].fa |     0.042 |
+|   genblk1[10].genblk1[22].fa |     0.041 |
+|   genblk1[10].genblk1[23].fa |     0.024 |
+|   genblk1[10].genblk1[24].fa |     0.049 |
+|   genblk1[10].genblk1[25].fa |     0.036 |
+|   genblk1[10].genblk1[26].fa |     0.051 |
+|   genblk1[10].genblk1[27].fa |     0.059 |
+|   genblk1[10].genblk1[28].fa |     0.036 |
+|   genblk1[10].genblk1[29].fa |     0.030 |
+|   genblk1[10].genblk1[2].fa  |     0.033 |
+|   genblk1[10].genblk1[30].fa |     0.010 |
+|   genblk1[10].genblk1[31].fa |     0.003 |
+|   genblk1[10].genblk1[3].fa  |     0.041 |
+|   genblk1[10].genblk1[4].fa  |     0.027 |
+|   genblk1[10].genblk1[5].fa  |     0.034 |
+|   genblk1[10].genblk1[6].fa  |     0.042 |
+|   genblk1[10].genblk1[7].fa  |     0.042 |
+|   genblk1[10].genblk1[8].fa  |     0.048 |
+|   genblk1[10].genblk1[9].fa  |     0.045 |
+|   genblk1[11].genblk1[0].fa  |     0.063 |
+|   genblk1[11].genblk1[10].fa |     0.050 |
+|   genblk1[11].genblk1[11].fa |     0.031 |
+|   genblk1[11].genblk1[12].fa |     0.028 |
+|   genblk1[11].genblk1[13].fa |     0.043 |
+|   genblk1[11].genblk1[14].fa |     0.059 |
+|   genblk1[11].genblk1[15].fa |     0.057 |
+|   genblk1[11].genblk1[16].fa |     0.047 |
+|   genblk1[11].genblk1[17].fa |     0.040 |
+|   genblk1[11].genblk1[18].fa |     0.043 |
+|   genblk1[11].genblk1[19].fa |     0.051 |
+|   genblk1[11].genblk1[1].fa  |     0.040 |
+|   genblk1[11].genblk1[20].fa |     0.045 |
+|   genblk1[11].genblk1[21].fa |     0.046 |
+|   genblk1[11].genblk1[22].fa |     0.030 |
+|   genblk1[11].genblk1[23].fa |     0.050 |
+|   genblk1[11].genblk1[24].fa |     0.027 |
+|   genblk1[11].genblk1[25].fa |     0.056 |
+|   genblk1[11].genblk1[26].fa |     0.042 |
+|   genblk1[11].genblk1[27].fa |     0.065 |
+|   genblk1[11].genblk1[28].fa |     0.044 |
+|   genblk1[11].genblk1[29].fa |     0.025 |
+|   genblk1[11].genblk1[2].fa  |     0.031 |
+|   genblk1[11].genblk1[30].fa |     0.017 |
+|   genblk1[11].genblk1[31].fa |     0.003 |
+|   genblk1[11].genblk1[3].fa  |     0.029 |
+|   genblk1[11].genblk1[4].fa  |     0.034 |
+|   genblk1[11].genblk1[5].fa  |     0.038 |
+|   genblk1[11].genblk1[6].fa  |     0.024 |
+|   genblk1[11].genblk1[7].fa  |     0.035 |
+|   genblk1[11].genblk1[8].fa  |     0.039 |
+|   genblk1[11].genblk1[9].fa  |     0.055 |
+|   genblk1[12].genblk1[0].fa  |     0.074 |
+|   genblk1[12].genblk1[10].fa |     0.037 |
+|   genblk1[12].genblk1[11].fa |     0.034 |
+|   genblk1[12].genblk1[12].fa |     0.038 |
+|   genblk1[12].genblk1[13].fa |     0.043 |
+|   genblk1[12].genblk1[14].fa |     0.041 |
+|   genblk1[12].genblk1[15].fa |     0.030 |
+|   genblk1[12].genblk1[16].fa |     0.045 |
+|   genblk1[12].genblk1[17].fa |     0.044 |
+|   genblk1[12].genblk1[18].fa |     0.037 |
+|   genblk1[12].genblk1[19].fa |     0.044 |
+|   genblk1[12].genblk1[1].fa  |     0.040 |
+|   genblk1[12].genblk1[20].fa |     0.036 |
+|   genblk1[12].genblk1[21].fa |     0.035 |
+|   genblk1[12].genblk1[22].fa |     0.040 |
+|   genblk1[12].genblk1[23].fa |     0.045 |
+|   genblk1[12].genblk1[24].fa |     0.041 |
+|   genblk1[12].genblk1[25].fa |     0.041 |
+|   genblk1[12].genblk1[26].fa |     0.041 |
+|   genblk1[12].genblk1[27].fa |     0.050 |
+|   genblk1[12].genblk1[28].fa |     0.026 |
+|   genblk1[12].genblk1[29].fa |     0.025 |
+|   genblk1[12].genblk1[2].fa  |     0.030 |
+|   genblk1[12].genblk1[30].fa |     0.017 |
+|   genblk1[12].genblk1[31].fa |     0.002 |
+|   genblk1[12].genblk1[3].fa  |     0.029 |
+|   genblk1[12].genblk1[4].fa  |     0.038 |
+|   genblk1[12].genblk1[5].fa  |     0.047 |
+|   genblk1[12].genblk1[6].fa  |     0.046 |
+|   genblk1[12].genblk1[7].fa  |     0.042 |
+|   genblk1[12].genblk1[8].fa  |     0.047 |
+|   genblk1[12].genblk1[9].fa  |     0.046 |
+|   genblk1[13].genblk1[0].fa  |     0.069 |
+|   genblk1[13].genblk1[10].fa |     0.042 |
+|   genblk1[13].genblk1[11].fa |     0.028 |
+|   genblk1[13].genblk1[12].fa |     0.042 |
+|   genblk1[13].genblk1[13].fa |     0.052 |
+|   genblk1[13].genblk1[14].fa |     0.050 |
+|   genblk1[13].genblk1[15].fa |     0.032 |
+|   genblk1[13].genblk1[16].fa |     0.041 |
+|   genblk1[13].genblk1[17].fa |     0.054 |
+|   genblk1[13].genblk1[18].fa |     0.035 |
+|   genblk1[13].genblk1[19].fa |     0.042 |
+|   genblk1[13].genblk1[1].fa  |     0.054 |
+|   genblk1[13].genblk1[20].fa |     0.038 |
+|   genblk1[13].genblk1[21].fa |     0.026 |
+|   genblk1[13].genblk1[22].fa |     0.035 |
+|   genblk1[13].genblk1[23].fa |     0.032 |
+|   genblk1[13].genblk1[24].fa |     0.037 |
+|   genblk1[13].genblk1[25].fa |     0.031 |
+|   genblk1[13].genblk1[26].fa |     0.034 |
+|   genblk1[13].genblk1[27].fa |     0.038 |
+|   genblk1[13].genblk1[28].fa |     0.035 |
+|   genblk1[13].genblk1[29].fa |     0.024 |
+|   genblk1[13].genblk1[2].fa  |     0.036 |
+|   genblk1[13].genblk1[30].fa |     0.015 |
+|   genblk1[13].genblk1[31].fa |     0.002 |
+|   genblk1[13].genblk1[3].fa  |     0.034 |
+|   genblk1[13].genblk1[4].fa  |     0.034 |
+|   genblk1[13].genblk1[5].fa  |     0.042 |
+|   genblk1[13].genblk1[6].fa  |     0.040 |
+|   genblk1[13].genblk1[7].fa  |     0.050 |
+|   genblk1[13].genblk1[8].fa  |     0.047 |
+|   genblk1[13].genblk1[9].fa  |     0.039 |
+|   genblk1[14].genblk1[0].fa  |     0.083 |
+|   genblk1[14].genblk1[10].fa |     0.042 |
+|   genblk1[14].genblk1[11].fa |     0.049 |
+|   genblk1[14].genblk1[12].fa |     0.039 |
+|   genblk1[14].genblk1[13].fa |     0.036 |
+|   genblk1[14].genblk1[14].fa |     0.042 |
+|   genblk1[14].genblk1[15].fa |     0.043 |
+|   genblk1[14].genblk1[16].fa |     0.052 |
+|   genblk1[14].genblk1[17].fa |     0.043 |
+|   genblk1[14].genblk1[18].fa |     0.041 |
+|   genblk1[14].genblk1[19].fa |     0.047 |
+|   genblk1[14].genblk1[1].fa  |     0.030 |
+|   genblk1[14].genblk1[20].fa |     0.043 |
+|   genblk1[14].genblk1[21].fa |     0.034 |
+|   genblk1[14].genblk1[22].fa |     0.053 |
+|   genblk1[14].genblk1[23].fa |     0.033 |
+|   genblk1[14].genblk1[24].fa |     0.041 |
+|   genblk1[14].genblk1[25].fa |     0.042 |
+|   genblk1[14].genblk1[26].fa |     0.034 |
+|   genblk1[14].genblk1[27].fa |     0.046 |
+|   genblk1[14].genblk1[28].fa |     0.040 |
+|   genblk1[14].genblk1[29].fa |     0.031 |
+|   genblk1[14].genblk1[2].fa  |     0.041 |
+|   genblk1[14].genblk1[30].fa |     0.014 |
+|   genblk1[14].genblk1[31].fa |     0.001 |
+|   genblk1[14].genblk1[3].fa  |     0.042 |
+|   genblk1[14].genblk1[4].fa  |     0.045 |
+|   genblk1[14].genblk1[5].fa  |     0.042 |
+|   genblk1[14].genblk1[6].fa  |     0.037 |
+|   genblk1[14].genblk1[7].fa  |     0.033 |
+|   genblk1[14].genblk1[8].fa  |     0.038 |
+|   genblk1[14].genblk1[9].fa  |     0.027 |
+|   genblk1[15].genblk1[0].fa  |     0.077 |
+|   genblk1[15].genblk1[10].fa |     0.044 |
+|   genblk1[15].genblk1[11].fa |     0.043 |
+|   genblk1[15].genblk1[12].fa |     0.035 |
+|   genblk1[15].genblk1[13].fa |     0.032 |
+|   genblk1[15].genblk1[14].fa |     0.032 |
+|   genblk1[15].genblk1[15].fa |     0.040 |
+|   genblk1[15].genblk1[16].fa |     0.039 |
+|   genblk1[15].genblk1[17].fa |     0.048 |
+|   genblk1[15].genblk1[18].fa |     0.041 |
+|   genblk1[15].genblk1[19].fa |     0.046 |
+|   genblk1[15].genblk1[1].fa  |     0.041 |
+|   genblk1[15].genblk1[20].fa |     0.057 |
+|   genblk1[15].genblk1[21].fa |     0.033 |
+|   genblk1[15].genblk1[22].fa |     0.038 |
+|   genblk1[15].genblk1[23].fa |     0.057 |
+|   genblk1[15].genblk1[24].fa |     0.031 |
+|   genblk1[15].genblk1[25].fa |     0.053 |
+|   genblk1[15].genblk1[26].fa |     0.041 |
+|   genblk1[15].genblk1[27].fa |     0.042 |
+|   genblk1[15].genblk1[28].fa |     0.039 |
+|   genblk1[15].genblk1[29].fa |     0.031 |
+|   genblk1[15].genblk1[2].fa  |     0.040 |
+|   genblk1[15].genblk1[30].fa |     0.014 |
+|   genblk1[15].genblk1[31].fa |     0.003 |
+|   genblk1[15].genblk1[3].fa  |     0.047 |
+|   genblk1[15].genblk1[4].fa  |     0.037 |
+|   genblk1[15].genblk1[5].fa  |     0.037 |
+|   genblk1[15].genblk1[6].fa  |     0.034 |
+|   genblk1[15].genblk1[7].fa  |     0.037 |
+|   genblk1[15].genblk1[8].fa  |     0.036 |
+|   genblk1[15].genblk1[9].fa  |     0.040 |
+|   genblk1[16].genblk1[0].fa  |     0.070 |
+|   genblk1[16].genblk1[10].fa |     0.042 |
+|   genblk1[16].genblk1[11].fa |     0.036 |
+|   genblk1[16].genblk1[12].fa |     0.033 |
+|   genblk1[16].genblk1[13].fa |     0.035 |
+|   genblk1[16].genblk1[14].fa |     0.042 |
+|   genblk1[16].genblk1[15].fa |     0.038 |
+|   genblk1[16].genblk1[16].fa |     0.031 |
+|   genblk1[16].genblk1[17].fa |     0.043 |
+|   genblk1[16].genblk1[18].fa |     0.040 |
+|   genblk1[16].genblk1[19].fa |     0.043 |
+|   genblk1[16].genblk1[1].fa  |     0.034 |
+|   genblk1[16].genblk1[20].fa |     0.054 |
+|   genblk1[16].genblk1[21].fa |     0.029 |
+|   genblk1[16].genblk1[22].fa |     0.044 |
+|   genblk1[16].genblk1[23].fa |     0.034 |
+|   genblk1[16].genblk1[24].fa |     0.032 |
+|   genblk1[16].genblk1[25].fa |     0.036 |
+|   genblk1[16].genblk1[26].fa |     0.039 |
+|   genblk1[16].genblk1[27].fa |     0.056 |
+|   genblk1[16].genblk1[28].fa |     0.044 |
+|   genblk1[16].genblk1[29].fa |     0.038 |
+|   genblk1[16].genblk1[2].fa  |     0.032 |
+|   genblk1[16].genblk1[30].fa |     0.015 |
+|   genblk1[16].genblk1[31].fa |     0.003 |
+|   genblk1[16].genblk1[3].fa  |     0.036 |
+|   genblk1[16].genblk1[4].fa  |     0.050 |
+|   genblk1[16].genblk1[5].fa  |     0.027 |
+|   genblk1[16].genblk1[6].fa  |     0.046 |
+|   genblk1[16].genblk1[7].fa  |     0.034 |
+|   genblk1[16].genblk1[8].fa  |     0.040 |
+|   genblk1[16].genblk1[9].fa  |     0.040 |
+|   genblk1[17].genblk1[0].fa  |     0.072 |
+|   genblk1[17].genblk1[10].fa |     0.041 |
+|   genblk1[17].genblk1[11].fa |     0.050 |
+|   genblk1[17].genblk1[12].fa |     0.035 |
+|   genblk1[17].genblk1[13].fa |     0.047 |
+|   genblk1[17].genblk1[14].fa |     0.044 |
+|   genblk1[17].genblk1[15].fa |     0.039 |
+|   genblk1[17].genblk1[16].fa |     0.048 |
+|   genblk1[17].genblk1[17].fa |     0.053 |
+|   genblk1[17].genblk1[18].fa |     0.050 |
+|   genblk1[17].genblk1[19].fa |     0.036 |
+|   genblk1[17].genblk1[1].fa  |     0.034 |
+|   genblk1[17].genblk1[20].fa |     0.043 |
+|   genblk1[17].genblk1[21].fa |     0.043 |
+|   genblk1[17].genblk1[22].fa |     0.030 |
+|   genblk1[17].genblk1[23].fa |     0.031 |
+|   genblk1[17].genblk1[24].fa |     0.034 |
+|   genblk1[17].genblk1[25].fa |     0.029 |
+|   genblk1[17].genblk1[26].fa |     0.042 |
+|   genblk1[17].genblk1[27].fa |     0.046 |
+|   genblk1[17].genblk1[28].fa |     0.032 |
+|   genblk1[17].genblk1[29].fa |     0.026 |
+|   genblk1[17].genblk1[2].fa  |     0.036 |
+|   genblk1[17].genblk1[30].fa |     0.012 |
+|   genblk1[17].genblk1[31].fa |     0.003 |
+|   genblk1[17].genblk1[3].fa  |     0.042 |
+|   genblk1[17].genblk1[4].fa  |     0.033 |
+|   genblk1[17].genblk1[5].fa  |     0.042 |
+|   genblk1[17].genblk1[6].fa  |     0.034 |
+|   genblk1[17].genblk1[7].fa  |     0.032 |
+|   genblk1[17].genblk1[8].fa  |     0.033 |
+|   genblk1[17].genblk1[9].fa  |     0.035 |
+|   genblk1[18].genblk1[0].fa  |     0.082 |
+|   genblk1[18].genblk1[10].fa |     0.043 |
+|   genblk1[18].genblk1[11].fa |     0.031 |
+|   genblk1[18].genblk1[12].fa |     0.039 |
+|   genblk1[18].genblk1[13].fa |     0.036 |
+|   genblk1[18].genblk1[14].fa |     0.043 |
+|   genblk1[18].genblk1[15].fa |     0.043 |
+|   genblk1[18].genblk1[16].fa |     0.038 |
+|   genblk1[18].genblk1[17].fa |     0.036 |
+|   genblk1[18].genblk1[18].fa |     0.053 |
+|   genblk1[18].genblk1[19].fa |     0.045 |
+|   genblk1[18].genblk1[1].fa  |     0.039 |
+|   genblk1[18].genblk1[20].fa |     0.030 |
+|   genblk1[18].genblk1[21].fa |     0.043 |
+|   genblk1[18].genblk1[22].fa |     0.034 |
+|   genblk1[18].genblk1[23].fa |     0.049 |
+|   genblk1[18].genblk1[24].fa |     0.042 |
+|   genblk1[18].genblk1[25].fa |     0.030 |
+|   genblk1[18].genblk1[26].fa |     0.049 |
+|   genblk1[18].genblk1[27].fa |     0.042 |
+|   genblk1[18].genblk1[28].fa |     0.042 |
+|   genblk1[18].genblk1[29].fa |     0.032 |
+|   genblk1[18].genblk1[2].fa  |     0.048 |
+|   genblk1[18].genblk1[30].fa |     0.016 |
+|   genblk1[18].genblk1[31].fa |     0.002 |
+|   genblk1[18].genblk1[3].fa  |     0.050 |
+|   genblk1[18].genblk1[4].fa  |     0.027 |
+|   genblk1[18].genblk1[5].fa  |     0.052 |
+|   genblk1[18].genblk1[6].fa  |     0.034 |
+|   genblk1[18].genblk1[7].fa  |     0.046 |
+|   genblk1[18].genblk1[8].fa  |     0.034 |
+|   genblk1[18].genblk1[9].fa  |     0.045 |
+|   genblk1[19].genblk1[0].fa  |     0.066 |
+|   genblk1[19].genblk1[10].fa |     0.043 |
+|   genblk1[19].genblk1[11].fa |     0.039 |
+|   genblk1[19].genblk1[12].fa |     0.040 |
+|   genblk1[19].genblk1[13].fa |     0.048 |
+|   genblk1[19].genblk1[14].fa |     0.044 |
+|   genblk1[19].genblk1[15].fa |     0.042 |
+|   genblk1[19].genblk1[16].fa |     0.038 |
+|   genblk1[19].genblk1[17].fa |     0.047 |
+|   genblk1[19].genblk1[18].fa |     0.043 |
+|   genblk1[19].genblk1[19].fa |     0.039 |
+|   genblk1[19].genblk1[1].fa  |     0.039 |
+|   genblk1[19].genblk1[20].fa |     0.047 |
+|   genblk1[19].genblk1[21].fa |     0.036 |
+|   genblk1[19].genblk1[22].fa |     0.039 |
+|   genblk1[19].genblk1[23].fa |     0.025 |
+|   genblk1[19].genblk1[24].fa |     0.040 |
+|   genblk1[19].genblk1[25].fa |     0.045 |
+|   genblk1[19].genblk1[26].fa |     0.028 |
+|   genblk1[19].genblk1[27].fa |     0.050 |
+|   genblk1[19].genblk1[28].fa |     0.038 |
+|   genblk1[19].genblk1[29].fa |     0.023 |
+|   genblk1[19].genblk1[2].fa  |     0.042 |
+|   genblk1[19].genblk1[30].fa |     0.018 |
+|   genblk1[19].genblk1[31].fa |     0.002 |
+|   genblk1[19].genblk1[3].fa  |     0.039 |
+|   genblk1[19].genblk1[4].fa  |     0.031 |
+|   genblk1[19].genblk1[5].fa  |     0.061 |
+|   genblk1[19].genblk1[6].fa  |     0.040 |
+|   genblk1[19].genblk1[7].fa  |     0.050 |
+|   genblk1[19].genblk1[8].fa  |     0.056 |
+|   genblk1[19].genblk1[9].fa  |     0.038 |
+|   genblk1[1].genblk1[0].fa   |     0.007 |
+|   genblk1[1].genblk1[10].fa  |     0.006 |
+|   genblk1[1].genblk1[11].fa  |     0.004 |
+|   genblk1[1].genblk1[12].fa  |     0.005 |
+|   genblk1[1].genblk1[13].fa  |     0.006 |
+|   genblk1[1].genblk1[14].fa  |     0.004 |
+|   genblk1[1].genblk1[15].fa  |     0.006 |
+|   genblk1[1].genblk1[16].fa  |     0.005 |
+|   genblk1[1].genblk1[17].fa  |     0.004 |
+|   genblk1[1].genblk1[18].fa  |     0.007 |
+|   genblk1[1].genblk1[19].fa  |     0.006 |
+|   genblk1[1].genblk1[1].fa   |     0.005 |
+|   genblk1[1].genblk1[20].fa  |     0.004 |
+|   genblk1[1].genblk1[21].fa  |     0.006 |
+|   genblk1[1].genblk1[22].fa  |     0.006 |
+|   genblk1[1].genblk1[23].fa  |     0.006 |
+|   genblk1[1].genblk1[24].fa  |     0.006 |
+|   genblk1[1].genblk1[25].fa  |     0.007 |
+|   genblk1[1].genblk1[26].fa  |     0.005 |
+|   genblk1[1].genblk1[27].fa  |     0.005 |
+|   genblk1[1].genblk1[28].fa  |     0.007 |
+|   genblk1[1].genblk1[29].fa  |     0.005 |
+|   genblk1[1].genblk1[2].fa   |     0.005 |
+|   genblk1[1].genblk1[30].fa  |     0.006 |
+|   genblk1[1].genblk1[31].fa  |     0.002 |
+|   genblk1[1].genblk1[3].fa   |     0.005 |
+|   genblk1[1].genblk1[4].fa   |     0.006 |
+|   genblk1[1].genblk1[5].fa   |     0.005 |
+|   genblk1[1].genblk1[6].fa   |     0.004 |
+|   genblk1[1].genblk1[7].fa   |     0.006 |
+|   genblk1[1].genblk1[8].fa   |     0.006 |
+|   genblk1[1].genblk1[9].fa   |     0.005 |
+|   genblk1[20].genblk1[0].fa  |     0.067 |
+|   genblk1[20].genblk1[10].fa |     0.036 |
+|   genblk1[20].genblk1[11].fa |     0.029 |
+|   genblk1[20].genblk1[12].fa |     0.042 |
+|   genblk1[20].genblk1[13].fa |     0.036 |
+|   genblk1[20].genblk1[14].fa |     0.034 |
+|   genblk1[20].genblk1[15].fa |     0.034 |
+|   genblk1[20].genblk1[16].fa |     0.049 |
+|   genblk1[20].genblk1[17].fa |     0.043 |
+|   genblk1[20].genblk1[18].fa |     0.046 |
+|   genblk1[20].genblk1[19].fa |     0.043 |
+|   genblk1[20].genblk1[1].fa  |     0.040 |
+|   genblk1[20].genblk1[20].fa |     0.035 |
+|   genblk1[20].genblk1[21].fa |     0.052 |
+|   genblk1[20].genblk1[22].fa |     0.030 |
+|   genblk1[20].genblk1[23].fa |     0.038 |
+|   genblk1[20].genblk1[24].fa |     0.025 |
+|   genblk1[20].genblk1[25].fa |     0.030 |
+|   genblk1[20].genblk1[26].fa |     0.037 |
+|   genblk1[20].genblk1[27].fa |     0.039 |
+|   genblk1[20].genblk1[28].fa |     0.033 |
+|   genblk1[20].genblk1[29].fa |     0.027 |
+|   genblk1[20].genblk1[2].fa  |     0.034 |
+|   genblk1[20].genblk1[30].fa |     0.014 |
+|   genblk1[20].genblk1[31].fa |     0.002 |
+|   genblk1[20].genblk1[3].fa  |     0.047 |
+|   genblk1[20].genblk1[4].fa  |     0.029 |
+|   genblk1[20].genblk1[5].fa  |     0.033 |
+|   genblk1[20].genblk1[6].fa  |     0.044 |
+|   genblk1[20].genblk1[7].fa  |     0.044 |
+|   genblk1[20].genblk1[8].fa  |     0.051 |
+|   genblk1[20].genblk1[9].fa  |     0.033 |
+|   genblk1[21].genblk1[0].fa  |     0.076 |
+|   genblk1[21].genblk1[10].fa |     0.039 |
+|   genblk1[21].genblk1[11].fa |     0.050 |
+|   genblk1[21].genblk1[12].fa |     0.041 |
+|   genblk1[21].genblk1[13].fa |     0.042 |
+|   genblk1[21].genblk1[14].fa |     0.032 |
+|   genblk1[21].genblk1[15].fa |     0.045 |
+|   genblk1[21].genblk1[16].fa |     0.040 |
+|   genblk1[21].genblk1[17].fa |     0.040 |
+|   genblk1[21].genblk1[18].fa |     0.043 |
+|   genblk1[21].genblk1[19].fa |     0.039 |
+|   genblk1[21].genblk1[1].fa  |     0.031 |
+|   genblk1[21].genblk1[20].fa |     0.037 |
+|   genblk1[21].genblk1[21].fa |     0.035 |
+|   genblk1[21].genblk1[22].fa |     0.043 |
+|   genblk1[21].genblk1[23].fa |     0.031 |
+|   genblk1[21].genblk1[24].fa |     0.026 |
+|   genblk1[21].genblk1[25].fa |     0.036 |
+|   genblk1[21].genblk1[26].fa |     0.043 |
+|   genblk1[21].genblk1[27].fa |     0.042 |
+|   genblk1[21].genblk1[28].fa |     0.032 |
+|   genblk1[21].genblk1[29].fa |     0.026 |
+|   genblk1[21].genblk1[2].fa  |     0.036 |
+|   genblk1[21].genblk1[30].fa |     0.017 |
+|   genblk1[21].genblk1[31].fa |     0.002 |
+|   genblk1[21].genblk1[3].fa  |     0.041 |
+|   genblk1[21].genblk1[4].fa  |     0.042 |
+|   genblk1[21].genblk1[5].fa  |     0.031 |
+|   genblk1[21].genblk1[6].fa  |     0.034 |
+|   genblk1[21].genblk1[7].fa  |     0.046 |
+|   genblk1[21].genblk1[8].fa  |     0.044 |
+|   genblk1[21].genblk1[9].fa  |     0.038 |
+|   genblk1[22].genblk1[0].fa  |     0.079 |
+|   genblk1[22].genblk1[10].fa |     0.043 |
+|   genblk1[22].genblk1[11].fa |     0.039 |
+|   genblk1[22].genblk1[12].fa |     0.036 |
+|   genblk1[22].genblk1[13].fa |     0.046 |
+|   genblk1[22].genblk1[14].fa |     0.038 |
+|   genblk1[22].genblk1[15].fa |     0.032 |
+|   genblk1[22].genblk1[16].fa |     0.039 |
+|   genblk1[22].genblk1[17].fa |     0.043 |
+|   genblk1[22].genblk1[18].fa |     0.042 |
+|   genblk1[22].genblk1[19].fa |     0.050 |
+|   genblk1[22].genblk1[1].fa  |     0.044 |
+|   genblk1[22].genblk1[20].fa |     0.050 |
+|   genblk1[22].genblk1[21].fa |     0.036 |
+|   genblk1[22].genblk1[22].fa |     0.046 |
+|   genblk1[22].genblk1[23].fa |     0.030 |
+|   genblk1[22].genblk1[24].fa |     0.032 |
+|   genblk1[22].genblk1[25].fa |     0.042 |
+|   genblk1[22].genblk1[26].fa |     0.040 |
+|   genblk1[22].genblk1[27].fa |     0.044 |
+|   genblk1[22].genblk1[28].fa |     0.029 |
+|   genblk1[22].genblk1[29].fa |     0.028 |
+|   genblk1[22].genblk1[2].fa  |     0.047 |
+|   genblk1[22].genblk1[30].fa |     0.012 |
+|   genblk1[22].genblk1[31].fa |     0.003 |
+|   genblk1[22].genblk1[3].fa  |     0.036 |
+|   genblk1[22].genblk1[4].fa  |     0.027 |
+|   genblk1[22].genblk1[5].fa  |     0.031 |
+|   genblk1[22].genblk1[6].fa  |     0.049 |
+|   genblk1[22].genblk1[7].fa  |     0.041 |
+|   genblk1[22].genblk1[8].fa  |     0.035 |
+|   genblk1[22].genblk1[9].fa  |     0.036 |
+|   genblk1[23].genblk1[0].fa  |     0.085 |
+|   genblk1[23].genblk1[10].fa |     0.034 |
+|   genblk1[23].genblk1[11].fa |     0.044 |
+|   genblk1[23].genblk1[12].fa |     0.029 |
+|   genblk1[23].genblk1[13].fa |     0.033 |
+|   genblk1[23].genblk1[14].fa |     0.028 |
+|   genblk1[23].genblk1[15].fa |     0.046 |
+|   genblk1[23].genblk1[16].fa |     0.031 |
+|   genblk1[23].genblk1[17].fa |     0.043 |
+|   genblk1[23].genblk1[18].fa |     0.046 |
+|   genblk1[23].genblk1[19].fa |     0.045 |
+|   genblk1[23].genblk1[1].fa  |     0.034 |
+|   genblk1[23].genblk1[20].fa |     0.036 |
+|   genblk1[23].genblk1[21].fa |     0.045 |
+|   genblk1[23].genblk1[22].fa |     0.027 |
+|   genblk1[23].genblk1[23].fa |     0.036 |
+|   genblk1[23].genblk1[24].fa |     0.047 |
+|   genblk1[23].genblk1[25].fa |     0.047 |
+|   genblk1[23].genblk1[26].fa |     0.037 |
+|   genblk1[23].genblk1[27].fa |     0.036 |
+|   genblk1[23].genblk1[28].fa |     0.036 |
+|   genblk1[23].genblk1[29].fa |     0.026 |
+|   genblk1[23].genblk1[2].fa  |     0.047 |
+|   genblk1[23].genblk1[30].fa |     0.020 |
+|   genblk1[23].genblk1[31].fa |     0.002 |
+|   genblk1[23].genblk1[3].fa  |     0.050 |
+|   genblk1[23].genblk1[4].fa  |     0.038 |
+|   genblk1[23].genblk1[5].fa  |     0.040 |
+|   genblk1[23].genblk1[6].fa  |     0.049 |
+|   genblk1[23].genblk1[7].fa  |     0.044 |
+|   genblk1[23].genblk1[8].fa  |     0.030 |
+|   genblk1[23].genblk1[9].fa  |     0.036 |
+|   genblk1[24].genblk1[0].fa  |     0.074 |
+|   genblk1[24].genblk1[10].fa |     0.033 |
+|   genblk1[24].genblk1[11].fa |     0.028 |
+|   genblk1[24].genblk1[12].fa |     0.042 |
+|   genblk1[24].genblk1[13].fa |     0.037 |
+|   genblk1[24].genblk1[14].fa |     0.032 |
+|   genblk1[24].genblk1[15].fa |     0.041 |
+|   genblk1[24].genblk1[16].fa |     0.040 |
+|   genblk1[24].genblk1[17].fa |     0.036 |
+|   genblk1[24].genblk1[18].fa |     0.045 |
+|   genblk1[24].genblk1[19].fa |     0.047 |
+|   genblk1[24].genblk1[1].fa  |     0.053 |
+|   genblk1[24].genblk1[20].fa |     0.051 |
+|   genblk1[24].genblk1[21].fa |     0.031 |
+|   genblk1[24].genblk1[22].fa |     0.043 |
+|   genblk1[24].genblk1[23].fa |     0.043 |
+|   genblk1[24].genblk1[24].fa |     0.038 |
+|   genblk1[24].genblk1[25].fa |     0.036 |
+|   genblk1[24].genblk1[26].fa |     0.031 |
+|   genblk1[24].genblk1[27].fa |     0.048 |
+|   genblk1[24].genblk1[28].fa |     0.037 |
+|   genblk1[24].genblk1[29].fa |     0.029 |
+|   genblk1[24].genblk1[2].fa  |     0.040 |
+|   genblk1[24].genblk1[30].fa |     0.012 |
+|   genblk1[24].genblk1[31].fa |     0.004 |
+|   genblk1[24].genblk1[3].fa  |     0.041 |
+|   genblk1[24].genblk1[4].fa  |     0.048 |
+|   genblk1[24].genblk1[5].fa  |     0.036 |
+|   genblk1[24].genblk1[6].fa  |     0.040 |
+|   genblk1[24].genblk1[7].fa  |     0.034 |
+|   genblk1[24].genblk1[8].fa  |     0.039 |
+|   genblk1[24].genblk1[9].fa  |     0.029 |
+|   genblk1[25].genblk1[0].fa  |     0.075 |
+|   genblk1[25].genblk1[10].fa |     0.042 |
+|   genblk1[25].genblk1[11].fa |     0.036 |
+|   genblk1[25].genblk1[12].fa |     0.037 |
+|   genblk1[25].genblk1[13].fa |     0.056 |
+|   genblk1[25].genblk1[14].fa |     0.049 |
+|   genblk1[25].genblk1[15].fa |     0.039 |
+|   genblk1[25].genblk1[16].fa |     0.047 |
+|   genblk1[25].genblk1[17].fa |     0.047 |
+|   genblk1[25].genblk1[18].fa |     0.037 |
+|   genblk1[25].genblk1[19].fa |     0.043 |
+|   genblk1[25].genblk1[1].fa  |     0.044 |
+|   genblk1[25].genblk1[20].fa |     0.041 |
+|   genblk1[25].genblk1[21].fa |     0.046 |
+|   genblk1[25].genblk1[22].fa |     0.035 |
+|   genblk1[25].genblk1[23].fa |     0.030 |
+|   genblk1[25].genblk1[24].fa |     0.033 |
+|   genblk1[25].genblk1[25].fa |     0.032 |
+|   genblk1[25].genblk1[26].fa |     0.030 |
+|   genblk1[25].genblk1[27].fa |     0.056 |
+|   genblk1[25].genblk1[28].fa |     0.040 |
+|   genblk1[25].genblk1[29].fa |     0.028 |
+|   genblk1[25].genblk1[2].fa  |     0.034 |
+|   genblk1[25].genblk1[30].fa |     0.012 |
+|   genblk1[25].genblk1[31].fa |     0.002 |
+|   genblk1[25].genblk1[3].fa  |     0.029 |
+|   genblk1[25].genblk1[4].fa  |     0.041 |
+|   genblk1[25].genblk1[5].fa  |     0.053 |
+|   genblk1[25].genblk1[6].fa  |     0.048 |
+|   genblk1[25].genblk1[7].fa  |     0.024 |
+|   genblk1[25].genblk1[8].fa  |     0.041 |
+|   genblk1[25].genblk1[9].fa  |     0.035 |
+|   genblk1[26].genblk1[0].fa  |     0.077 |
+|   genblk1[26].genblk1[10].fa |     0.039 |
+|   genblk1[26].genblk1[11].fa |     0.045 |
+|   genblk1[26].genblk1[12].fa |     0.042 |
+|   genblk1[26].genblk1[13].fa |     0.043 |
+|   genblk1[26].genblk1[14].fa |     0.032 |
+|   genblk1[26].genblk1[15].fa |     0.048 |
+|   genblk1[26].genblk1[16].fa |     0.042 |
+|   genblk1[26].genblk1[17].fa |     0.047 |
+|   genblk1[26].genblk1[18].fa |     0.043 |
+|   genblk1[26].genblk1[19].fa |     0.035 |
+|   genblk1[26].genblk1[1].fa  |     0.033 |
+|   genblk1[26].genblk1[20].fa |     0.035 |
+|   genblk1[26].genblk1[21].fa |     0.036 |
+|   genblk1[26].genblk1[22].fa |     0.035 |
+|   genblk1[26].genblk1[23].fa |     0.032 |
+|   genblk1[26].genblk1[24].fa |     0.045 |
+|   genblk1[26].genblk1[25].fa |     0.048 |
+|   genblk1[26].genblk1[26].fa |     0.037 |
+|   genblk1[26].genblk1[27].fa |     0.043 |
+|   genblk1[26].genblk1[28].fa |     0.050 |
+|   genblk1[26].genblk1[29].fa |     0.029 |
+|   genblk1[26].genblk1[2].fa  |     0.047 |
+|   genblk1[26].genblk1[30].fa |     0.014 |
+|   genblk1[26].genblk1[31].fa |     0.002 |
+|   genblk1[26].genblk1[3].fa  |     0.039 |
+|   genblk1[26].genblk1[4].fa  |     0.027 |
+|   genblk1[26].genblk1[5].fa  |     0.021 |
+|   genblk1[26].genblk1[6].fa  |     0.034 |
+|   genblk1[26].genblk1[7].fa  |     0.028 |
+|   genblk1[26].genblk1[8].fa  |     0.051 |
+|   genblk1[26].genblk1[9].fa  |     0.034 |
+|   genblk1[27].genblk1[0].fa  |     0.072 |
+|   genblk1[27].genblk1[10].fa |     0.039 |
+|   genblk1[27].genblk1[11].fa |     0.033 |
+|   genblk1[27].genblk1[12].fa |     0.042 |
+|   genblk1[27].genblk1[13].fa |     0.038 |
+|   genblk1[27].genblk1[14].fa |     0.025 |
+|   genblk1[27].genblk1[15].fa |     0.049 |
+|   genblk1[27].genblk1[16].fa |     0.033 |
+|   genblk1[27].genblk1[17].fa |     0.046 |
+|   genblk1[27].genblk1[18].fa |     0.039 |
+|   genblk1[27].genblk1[19].fa |     0.051 |
+|   genblk1[27].genblk1[1].fa  |     0.034 |
+|   genblk1[27].genblk1[20].fa |     0.058 |
+|   genblk1[27].genblk1[21].fa |     0.054 |
+|   genblk1[27].genblk1[22].fa |     0.036 |
+|   genblk1[27].genblk1[23].fa |     0.038 |
+|   genblk1[27].genblk1[24].fa |     0.041 |
+|   genblk1[27].genblk1[25].fa |     0.044 |
+|   genblk1[27].genblk1[26].fa |     0.038 |
+|   genblk1[27].genblk1[27].fa |     0.042 |
+|   genblk1[27].genblk1[28].fa |     0.035 |
+|   genblk1[27].genblk1[29].fa |     0.022 |
+|   genblk1[27].genblk1[2].fa  |     0.046 |
+|   genblk1[27].genblk1[30].fa |     0.014 |
+|   genblk1[27].genblk1[31].fa |     0.003 |
+|   genblk1[27].genblk1[3].fa  |     0.035 |
+|   genblk1[27].genblk1[4].fa  |     0.028 |
+|   genblk1[27].genblk1[5].fa  |     0.032 |
+|   genblk1[27].genblk1[6].fa  |     0.040 |
+|   genblk1[27].genblk1[7].fa  |     0.050 |
+|   genblk1[27].genblk1[8].fa  |     0.044 |
+|   genblk1[27].genblk1[9].fa  |     0.033 |
+|   genblk1[28].genblk1[0].fa  |     0.086 |
+|   genblk1[28].genblk1[10].fa |     0.031 |
+|   genblk1[28].genblk1[11].fa |     0.045 |
+|   genblk1[28].genblk1[12].fa |     0.043 |
+|   genblk1[28].genblk1[13].fa |     0.034 |
+|   genblk1[28].genblk1[14].fa |     0.038 |
+|   genblk1[28].genblk1[15].fa |     0.032 |
+|   genblk1[28].genblk1[16].fa |     0.037 |
+|   genblk1[28].genblk1[17].fa |     0.027 |
+|   genblk1[28].genblk1[18].fa |     0.037 |
+|   genblk1[28].genblk1[19].fa |     0.049 |
+|   genblk1[28].genblk1[1].fa  |     0.041 |
+|   genblk1[28].genblk1[20].fa |     0.041 |
+|   genblk1[28].genblk1[21].fa |     0.039 |
+|   genblk1[28].genblk1[22].fa |     0.029 |
+|   genblk1[28].genblk1[23].fa |     0.040 |
+|   genblk1[28].genblk1[24].fa |     0.044 |
+|   genblk1[28].genblk1[25].fa |     0.036 |
+|   genblk1[28].genblk1[26].fa |     0.050 |
+|   genblk1[28].genblk1[27].fa |     0.048 |
+|   genblk1[28].genblk1[28].fa |     0.034 |
+|   genblk1[28].genblk1[29].fa |     0.027 |
+|   genblk1[28].genblk1[2].fa  |     0.039 |
+|   genblk1[28].genblk1[30].fa |     0.015 |
+|   genblk1[28].genblk1[31].fa |     0.002 |
+|   genblk1[28].genblk1[3].fa  |     0.047 |
+|   genblk1[28].genblk1[4].fa  |     0.035 |
+|   genblk1[28].genblk1[5].fa  |     0.044 |
+|   genblk1[28].genblk1[6].fa  |     0.053 |
+|   genblk1[28].genblk1[7].fa  |     0.038 |
+|   genblk1[28].genblk1[8].fa  |     0.034 |
+|   genblk1[28].genblk1[9].fa  |     0.048 |
+|   genblk1[29].genblk1[0].fa  |     0.086 |
+|   genblk1[29].genblk1[10].fa |     0.035 |
+|   genblk1[29].genblk1[11].fa |     0.028 |
+|   genblk1[29].genblk1[12].fa |     0.036 |
+|   genblk1[29].genblk1[13].fa |     0.032 |
+|   genblk1[29].genblk1[14].fa |     0.040 |
+|   genblk1[29].genblk1[15].fa |     0.038 |
+|   genblk1[29].genblk1[16].fa |     0.040 |
+|   genblk1[29].genblk1[17].fa |     0.043 |
+|   genblk1[29].genblk1[18].fa |     0.037 |
+|   genblk1[29].genblk1[19].fa |     0.044 |
+|   genblk1[29].genblk1[1].fa  |     0.040 |
+|   genblk1[29].genblk1[20].fa |     0.033 |
+|   genblk1[29].genblk1[21].fa |     0.040 |
+|   genblk1[29].genblk1[22].fa |     0.044 |
+|   genblk1[29].genblk1[23].fa |     0.046 |
+|   genblk1[29].genblk1[24].fa |     0.038 |
+|   genblk1[29].genblk1[25].fa |     0.036 |
+|   genblk1[29].genblk1[26].fa |     0.030 |
+|   genblk1[29].genblk1[27].fa |     0.048 |
+|   genblk1[29].genblk1[28].fa |     0.034 |
+|   genblk1[29].genblk1[29].fa |     0.025 |
+|   genblk1[29].genblk1[2].fa  |     0.034 |
+|   genblk1[29].genblk1[30].fa |     0.012 |
+|   genblk1[29].genblk1[31].fa |     0.003 |
+|   genblk1[29].genblk1[3].fa  |     0.043 |
+|   genblk1[29].genblk1[4].fa  |     0.040 |
+|   genblk1[29].genblk1[5].fa  |     0.049 |
+|   genblk1[29].genblk1[6].fa  |     0.042 |
+|   genblk1[29].genblk1[7].fa  |     0.028 |
+|   genblk1[29].genblk1[8].fa  |     0.036 |
+|   genblk1[29].genblk1[9].fa  |     0.041 |
+|   genblk1[2].genblk1[0].fa   |     0.013 |
+|   genblk1[2].genblk1[10].fa  |     0.009 |
+|   genblk1[2].genblk1[11].fa  |     0.009 |
+|   genblk1[2].genblk1[12].fa  |     0.008 |
+|   genblk1[2].genblk1[13].fa  |     0.009 |
+|   genblk1[2].genblk1[14].fa  |     0.010 |
+|   genblk1[2].genblk1[15].fa  |     0.010 |
+|   genblk1[2].genblk1[16].fa  |     0.011 |
+|   genblk1[2].genblk1[17].fa  |     0.012 |
+|   genblk1[2].genblk1[18].fa  |     0.011 |
+|   genblk1[2].genblk1[19].fa  |     0.012 |
+|   genblk1[2].genblk1[1].fa   |     0.012 |
+|   genblk1[2].genblk1[20].fa  |     0.011 |
+|   genblk1[2].genblk1[21].fa  |     0.009 |
+|   genblk1[2].genblk1[22].fa  |     0.009 |
+|   genblk1[2].genblk1[23].fa  |     0.008 |
+|   genblk1[2].genblk1[24].fa  |     0.009 |
+|   genblk1[2].genblk1[25].fa  |     0.009 |
+|   genblk1[2].genblk1[26].fa  |     0.011 |
+|   genblk1[2].genblk1[27].fa  |     0.008 |
+|   genblk1[2].genblk1[28].fa  |     0.011 |
+|   genblk1[2].genblk1[29].fa  |     0.011 |
+|   genblk1[2].genblk1[2].fa   |     0.009 |
+|   genblk1[2].genblk1[30].fa  |     0.010 |
+|   genblk1[2].genblk1[31].fa  |     0.003 |
+|   genblk1[2].genblk1[3].fa   |     0.009 |
+|   genblk1[2].genblk1[4].fa   |     0.012 |
+|   genblk1[2].genblk1[5].fa   |     0.010 |
+|   genblk1[2].genblk1[6].fa   |     0.009 |
+|   genblk1[2].genblk1[7].fa   |     0.012 |
+|   genblk1[2].genblk1[8].fa   |     0.009 |
+|   genblk1[2].genblk1[9].fa   |     0.008 |
+|   genblk1[30].genblk1[0].fa  |     0.056 |
+|   genblk1[30].genblk1[10].fa |     0.038 |
+|   genblk1[30].genblk1[11].fa |     0.040 |
+|   genblk1[30].genblk1[12].fa |     0.031 |
+|   genblk1[30].genblk1[13].fa |     0.026 |
+|   genblk1[30].genblk1[14].fa |     0.044 |
+|   genblk1[30].genblk1[15].fa |     0.027 |
+|   genblk1[30].genblk1[16].fa |     0.035 |
+|   genblk1[30].genblk1[17].fa |     0.031 |
+|   genblk1[30].genblk1[18].fa |     0.036 |
+|   genblk1[30].genblk1[19].fa |     0.039 |
+|   genblk1[30].genblk1[1].fa  |     0.045 |
+|   genblk1[30].genblk1[20].fa |     0.041 |
+|   genblk1[30].genblk1[21].fa |     0.045 |
+|   genblk1[30].genblk1[22].fa |     0.038 |
+|   genblk1[30].genblk1[23].fa |     0.038 |
+|   genblk1[30].genblk1[24].fa |     0.035 |
+|   genblk1[30].genblk1[25].fa |     0.031 |
+|   genblk1[30].genblk1[26].fa |     0.048 |
+|   genblk1[30].genblk1[27].fa |     0.042 |
+|   genblk1[30].genblk1[28].fa |     0.032 |
+|   genblk1[30].genblk1[29].fa |     0.030 |
+|   genblk1[30].genblk1[2].fa  |     0.032 |
+|   genblk1[30].genblk1[30].fa |     0.011 |
+|   genblk1[30].genblk1[31].fa |     0.004 |
+|   genblk1[30].genblk1[3].fa  |     0.039 |
+|   genblk1[30].genblk1[4].fa  |     0.048 |
+|   genblk1[30].genblk1[5].fa  |     0.055 |
+|   genblk1[30].genblk1[6].fa  |     0.029 |
+|   genblk1[30].genblk1[7].fa  |     0.038 |
+|   genblk1[30].genblk1[8].fa  |     0.039 |
+|   genblk1[30].genblk1[9].fa  |     0.038 |
+|   genblk1[31].genblk1[0].fa  |     0.067 |
+|   genblk1[31].genblk1[10].fa |     0.040 |
+|   genblk1[31].genblk1[11].fa |     0.036 |
+|   genblk1[31].genblk1[12].fa |     0.036 |
+|   genblk1[31].genblk1[13].fa |     0.036 |
+|   genblk1[31].genblk1[14].fa |     0.039 |
+|   genblk1[31].genblk1[15].fa |     0.033 |
+|   genblk1[31].genblk1[16].fa |     0.042 |
+|   genblk1[31].genblk1[17].fa |     0.045 |
+|   genblk1[31].genblk1[18].fa |     0.036 |
+|   genblk1[31].genblk1[19].fa |     0.053 |
+|   genblk1[31].genblk1[1].fa  |     0.049 |
+|   genblk1[31].genblk1[20].fa |     0.050 |
+|   genblk1[31].genblk1[21].fa |     0.064 |
+|   genblk1[31].genblk1[22].fa |     0.029 |
+|   genblk1[31].genblk1[23].fa |     0.034 |
+|   genblk1[31].genblk1[24].fa |     0.034 |
+|   genblk1[31].genblk1[25].fa |     0.029 |
+|   genblk1[31].genblk1[26].fa |     0.038 |
+|   genblk1[31].genblk1[27].fa |     0.033 |
+|   genblk1[31].genblk1[28].fa |     0.048 |
+|   genblk1[31].genblk1[29].fa |     0.028 |
+|   genblk1[31].genblk1[2].fa  |     0.048 |
+|   genblk1[31].genblk1[30].fa |     0.013 |
+|   genblk1[31].genblk1[31].fa |     0.003 |
+|   genblk1[31].genblk1[3].fa  |     0.050 |
+|   genblk1[31].genblk1[4].fa  |     0.040 |
+|   genblk1[31].genblk1[5].fa  |     0.051 |
+|   genblk1[31].genblk1[6].fa  |     0.037 |
+|   genblk1[31].genblk1[7].fa  |     0.037 |
+|   genblk1[31].genblk1[8].fa  |     0.040 |
+|   genblk1[31].genblk1[9].fa  |     0.036 |
+|   genblk1[32].genblk1[0].fa  |     0.079 |
+|   genblk1[32].genblk1[10].fa |     0.159 |
+|   genblk1[32].genblk1[11].fa |     0.163 |
+|   genblk1[32].genblk1[12].fa |     0.186 |
+|   genblk1[32].genblk1[13].fa |     0.184 |
+|   genblk1[32].genblk1[14].fa |     0.192 |
+|   genblk1[32].genblk1[15].fa |     0.179 |
+|   genblk1[32].genblk1[16].fa |     0.206 |
+|   genblk1[32].genblk1[17].fa |     0.211 |
+|   genblk1[32].genblk1[18].fa |     0.205 |
+|   genblk1[32].genblk1[19].fa |     0.221 |
+|   genblk1[32].genblk1[1].fa  |     0.127 |
+|   genblk1[32].genblk1[20].fa |     0.217 |
+|   genblk1[32].genblk1[21].fa |     0.235 |
+|   genblk1[32].genblk1[22].fa |     0.204 |
+|   genblk1[32].genblk1[23].fa |     0.247 |
+|   genblk1[32].genblk1[24].fa |     0.200 |
+|   genblk1[32].genblk1[25].fa |     0.244 |
+|   genblk1[32].genblk1[26].fa |     0.231 |
+|   genblk1[32].genblk1[27].fa |     0.207 |
+|   genblk1[32].genblk1[28].fa |     0.216 |
+|   genblk1[32].genblk1[29].fa |     0.146 |
+|   genblk1[32].genblk1[2].fa  |     0.149 |
+|   genblk1[32].genblk1[30].fa |     0.121 |
+|   genblk1[32].genblk1[31].fa |     0.055 |
+|   genblk1[32].genblk1[3].fa  |     0.166 |
+|   genblk1[32].genblk1[4].fa  |     0.164 |
+|   genblk1[32].genblk1[5].fa  |     0.164 |
+|   genblk1[32].genblk1[6].fa  |     0.165 |
+|   genblk1[32].genblk1[7].fa  |     0.156 |
+|   genblk1[32].genblk1[8].fa  |     0.174 |
+|   genblk1[32].genblk1[9].fa  |     0.180 |
+|   genblk1[3].genblk1[0].fa   |     0.020 |
+|   genblk1[3].genblk1[10].fa  |     0.014 |
+|   genblk1[3].genblk1[11].fa  |     0.012 |
+|   genblk1[3].genblk1[12].fa  |     0.017 |
+|   genblk1[3].genblk1[13].fa  |     0.015 |
+|   genblk1[3].genblk1[14].fa  |     0.013 |
+|   genblk1[3].genblk1[15].fa  |     0.013 |
+|   genblk1[3].genblk1[16].fa  |     0.016 |
+|   genblk1[3].genblk1[17].fa  |     0.016 |
+|   genblk1[3].genblk1[18].fa  |     0.017 |
+|   genblk1[3].genblk1[19].fa  |     0.015 |
+|   genblk1[3].genblk1[1].fa   |     0.014 |
+|   genblk1[3].genblk1[20].fa  |     0.019 |
+|   genblk1[3].genblk1[21].fa  |     0.016 |
+|   genblk1[3].genblk1[22].fa  |     0.014 |
+|   genblk1[3].genblk1[23].fa  |     0.014 |
+|   genblk1[3].genblk1[24].fa  |     0.014 |
+|   genblk1[3].genblk1[25].fa  |     0.016 |
+|   genblk1[3].genblk1[26].fa  |     0.016 |
+|   genblk1[3].genblk1[27].fa  |     0.014 |
+|   genblk1[3].genblk1[28].fa  |     0.020 |
+|   genblk1[3].genblk1[29].fa  |     0.015 |
+|   genblk1[3].genblk1[2].fa   |     0.014 |
+|   genblk1[3].genblk1[30].fa  |     0.013 |
+|   genblk1[3].genblk1[31].fa  |     0.004 |
+|   genblk1[3].genblk1[3].fa   |     0.012 |
+|   genblk1[3].genblk1[4].fa   |     0.017 |
+|   genblk1[3].genblk1[5].fa   |     0.015 |
+|   genblk1[3].genblk1[6].fa   |     0.013 |
+|   genblk1[3].genblk1[7].fa   |     0.014 |
+|   genblk1[3].genblk1[8].fa   |     0.016 |
+|   genblk1[3].genblk1[9].fa   |     0.015 |
+|   genblk1[4].genblk1[0].fa   |     0.035 |
+|   genblk1[4].genblk1[10].fa  |     0.027 |
+|   genblk1[4].genblk1[11].fa  |     0.024 |
+|   genblk1[4].genblk1[12].fa  |     0.027 |
+|   genblk1[4].genblk1[13].fa  |     0.025 |
+|   genblk1[4].genblk1[14].fa  |     0.027 |
+|   genblk1[4].genblk1[15].fa  |     0.019 |
+|   genblk1[4].genblk1[16].fa  |     0.019 |
+|   genblk1[4].genblk1[17].fa  |     0.021 |
+|   genblk1[4].genblk1[18].fa  |     0.021 |
+|   genblk1[4].genblk1[19].fa  |     0.023 |
+|   genblk1[4].genblk1[1].fa   |     0.020 |
+|   genblk1[4].genblk1[20].fa  |     0.022 |
+|   genblk1[4].genblk1[21].fa  |     0.028 |
+|   genblk1[4].genblk1[22].fa  |     0.020 |
+|   genblk1[4].genblk1[23].fa  |     0.019 |
+|   genblk1[4].genblk1[24].fa  |     0.025 |
+|   genblk1[4].genblk1[25].fa  |     0.018 |
+|   genblk1[4].genblk1[26].fa  |     0.026 |
+|   genblk1[4].genblk1[27].fa  |     0.023 |
+|   genblk1[4].genblk1[28].fa  |     0.030 |
+|   genblk1[4].genblk1[29].fa  |     0.021 |
+|   genblk1[4].genblk1[2].fa   |     0.036 |
+|   genblk1[4].genblk1[30].fa  |     0.015 |
+|   genblk1[4].genblk1[31].fa  |     0.003 |
+|   genblk1[4].genblk1[3].fa   |     0.026 |
+|   genblk1[4].genblk1[4].fa   |     0.022 |
+|   genblk1[4].genblk1[5].fa   |     0.029 |
+|   genblk1[4].genblk1[6].fa   |     0.019 |
+|   genblk1[4].genblk1[7].fa   |     0.020 |
+|   genblk1[4].genblk1[8].fa   |     0.020 |
+|   genblk1[4].genblk1[9].fa   |     0.027 |
+|   genblk1[5].genblk1[0].fa   |     0.057 |
+|   genblk1[5].genblk1[10].fa  |     0.030 |
+|   genblk1[5].genblk1[11].fa  |     0.028 |
+|   genblk1[5].genblk1[12].fa  |     0.029 |
+|   genblk1[5].genblk1[13].fa  |     0.031 |
+|   genblk1[5].genblk1[14].fa  |     0.036 |
+|   genblk1[5].genblk1[15].fa  |     0.031 |
+|   genblk1[5].genblk1[16].fa  |     0.031 |
+|   genblk1[5].genblk1[17].fa  |     0.030 |
+|   genblk1[5].genblk1[18].fa  |     0.031 |
+|   genblk1[5].genblk1[19].fa  |     0.033 |
+|   genblk1[5].genblk1[1].fa   |     0.050 |
+|   genblk1[5].genblk1[20].fa  |     0.027 |
+|   genblk1[5].genblk1[21].fa  |     0.049 |
+|   genblk1[5].genblk1[22].fa  |     0.029 |
+|   genblk1[5].genblk1[23].fa  |     0.023 |
+|   genblk1[5].genblk1[24].fa  |     0.033 |
+|   genblk1[5].genblk1[25].fa  |     0.027 |
+|   genblk1[5].genblk1[26].fa  |     0.021 |
+|   genblk1[5].genblk1[27].fa  |     0.033 |
+|   genblk1[5].genblk1[28].fa  |     0.042 |
+|   genblk1[5].genblk1[29].fa  |     0.021 |
+|   genblk1[5].genblk1[2].fa   |     0.028 |
+|   genblk1[5].genblk1[30].fa  |     0.012 |
+|   genblk1[5].genblk1[31].fa  |     0.003 |
+|   genblk1[5].genblk1[3].fa   |     0.038 |
+|   genblk1[5].genblk1[4].fa   |     0.030 |
+|   genblk1[5].genblk1[5].fa   |     0.030 |
+|   genblk1[5].genblk1[6].fa   |     0.023 |
+|   genblk1[5].genblk1[7].fa   |     0.031 |
+|   genblk1[5].genblk1[8].fa   |     0.030 |
+|   genblk1[5].genblk1[9].fa   |     0.029 |
+|   genblk1[6].genblk1[0].fa   |     0.045 |
+|   genblk1[6].genblk1[10].fa  |     0.030 |
+|   genblk1[6].genblk1[11].fa  |     0.033 |
+|   genblk1[6].genblk1[12].fa  |     0.036 |
+|   genblk1[6].genblk1[13].fa  |     0.034 |
+|   genblk1[6].genblk1[14].fa  |     0.040 |
+|   genblk1[6].genblk1[15].fa  |     0.041 |
+|   genblk1[6].genblk1[16].fa  |     0.038 |
+|   genblk1[6].genblk1[17].fa  |     0.034 |
+|   genblk1[6].genblk1[18].fa  |     0.037 |
+|   genblk1[6].genblk1[19].fa  |     0.031 |
+|   genblk1[6].genblk1[1].fa   |     0.032 |
+|   genblk1[6].genblk1[20].fa  |     0.046 |
+|   genblk1[6].genblk1[21].fa  |     0.041 |
+|   genblk1[6].genblk1[22].fa  |     0.034 |
+|   genblk1[6].genblk1[23].fa  |     0.027 |
+|   genblk1[6].genblk1[24].fa  |     0.025 |
+|   genblk1[6].genblk1[25].fa  |     0.040 |
+|   genblk1[6].genblk1[26].fa  |     0.030 |
+|   genblk1[6].genblk1[27].fa  |     0.035 |
+|   genblk1[6].genblk1[28].fa  |     0.035 |
+|   genblk1[6].genblk1[29].fa  |     0.021 |
+|   genblk1[6].genblk1[2].fa   |     0.032 |
+|   genblk1[6].genblk1[30].fa  |     0.013 |
+|   genblk1[6].genblk1[31].fa  |     0.003 |
+|   genblk1[6].genblk1[3].fa   |     0.041 |
+|   genblk1[6].genblk1[4].fa   |     0.039 |
+|   genblk1[6].genblk1[5].fa   |     0.040 |
+|   genblk1[6].genblk1[6].fa   |     0.036 |
+|   genblk1[6].genblk1[7].fa   |     0.039 |
+|   genblk1[6].genblk1[8].fa   |     0.051 |
+|   genblk1[6].genblk1[9].fa   |     0.036 |
+|   genblk1[7].genblk1[0].fa   |     0.069 |
+|   genblk1[7].genblk1[10].fa  |     0.039 |
+|   genblk1[7].genblk1[11].fa  |     0.046 |
+|   genblk1[7].genblk1[12].fa  |     0.037 |
+|   genblk1[7].genblk1[13].fa  |     0.043 |
+|   genblk1[7].genblk1[14].fa  |     0.038 |
+|   genblk1[7].genblk1[15].fa  |     0.037 |
+|   genblk1[7].genblk1[16].fa  |     0.039 |
+|   genblk1[7].genblk1[17].fa  |     0.038 |
+|   genblk1[7].genblk1[18].fa  |     0.044 |
+|   genblk1[7].genblk1[19].fa  |     0.043 |
+|   genblk1[7].genblk1[1].fa   |     0.042 |
+|   genblk1[7].genblk1[20].fa  |     0.046 |
+|   genblk1[7].genblk1[21].fa  |     0.048 |
+|   genblk1[7].genblk1[22].fa  |     0.030 |
+|   genblk1[7].genblk1[23].fa  |     0.048 |
+|   genblk1[7].genblk1[24].fa  |     0.031 |
+|   genblk1[7].genblk1[25].fa  |     0.041 |
+|   genblk1[7].genblk1[26].fa  |     0.053 |
+|   genblk1[7].genblk1[27].fa  |     0.045 |
+|   genblk1[7].genblk1[28].fa  |     0.032 |
+|   genblk1[7].genblk1[29].fa  |     0.019 |
+|   genblk1[7].genblk1[2].fa   |     0.049 |
+|   genblk1[7].genblk1[30].fa  |     0.014 |
+|   genblk1[7].genblk1[31].fa  |     0.003 |
+|   genblk1[7].genblk1[3].fa   |     0.035 |
+|   genblk1[7].genblk1[4].fa   |     0.037 |
+|   genblk1[7].genblk1[5].fa   |     0.052 |
+|   genblk1[7].genblk1[6].fa   |     0.053 |
+|   genblk1[7].genblk1[7].fa   |     0.042 |
+|   genblk1[7].genblk1[8].fa   |     0.032 |
+|   genblk1[7].genblk1[9].fa   |     0.046 |
+|   genblk1[8].genblk1[0].fa   |     0.058 |
+|   genblk1[8].genblk1[10].fa  |     0.036 |
+|   genblk1[8].genblk1[11].fa  |     0.050 |
+|   genblk1[8].genblk1[12].fa  |     0.041 |
+|   genblk1[8].genblk1[13].fa  |     0.044 |
+|   genblk1[8].genblk1[14].fa  |     0.050 |
+|   genblk1[8].genblk1[15].fa  |     0.037 |
+|   genblk1[8].genblk1[16].fa  |     0.037 |
+|   genblk1[8].genblk1[17].fa  |     0.046 |
+|   genblk1[8].genblk1[18].fa  |     0.031 |
+|   genblk1[8].genblk1[19].fa  |     0.041 |
+|   genblk1[8].genblk1[1].fa   |     0.036 |
+|   genblk1[8].genblk1[20].fa  |     0.042 |
+|   genblk1[8].genblk1[21].fa  |     0.038 |
+|   genblk1[8].genblk1[22].fa  |     0.043 |
+|   genblk1[8].genblk1[23].fa  |     0.037 |
+|   genblk1[8].genblk1[24].fa  |     0.049 |
+|   genblk1[8].genblk1[25].fa  |     0.037 |
+|   genblk1[8].genblk1[26].fa  |     0.038 |
+|   genblk1[8].genblk1[27].fa  |     0.049 |
+|   genblk1[8].genblk1[28].fa  |     0.033 |
+|   genblk1[8].genblk1[29].fa  |     0.030 |
+|   genblk1[8].genblk1[2].fa   |     0.051 |
+|   genblk1[8].genblk1[30].fa  |     0.015 |
+|   genblk1[8].genblk1[31].fa  |     0.002 |
+|   genblk1[8].genblk1[3].fa   |     0.040 |
+|   genblk1[8].genblk1[4].fa   |     0.038 |
+|   genblk1[8].genblk1[5].fa   |     0.053 |
+|   genblk1[8].genblk1[6].fa   |     0.034 |
+|   genblk1[8].genblk1[7].fa   |     0.040 |
+|   genblk1[8].genblk1[8].fa   |     0.047 |
+|   genblk1[8].genblk1[9].fa   |     0.051 |
+|   genblk1[9].genblk1[0].fa   |     0.074 |
+|   genblk1[9].genblk1[10].fa  |     0.039 |
+|   genblk1[9].genblk1[11].fa  |     0.054 |
+|   genblk1[9].genblk1[12].fa  |     0.046 |
+|   genblk1[9].genblk1[13].fa  |     0.042 |
+|   genblk1[9].genblk1[14].fa  |     0.038 |
+|   genblk1[9].genblk1[15].fa  |     0.035 |
+|   genblk1[9].genblk1[16].fa  |     0.036 |
+|   genblk1[9].genblk1[17].fa  |     0.051 |
+|   genblk1[9].genblk1[18].fa  |     0.035 |
+|   genblk1[9].genblk1[19].fa  |     0.033 |
+|   genblk1[9].genblk1[1].fa   |     0.044 |
+|   genblk1[9].genblk1[20].fa  |     0.036 |
+|   genblk1[9].genblk1[21].fa  |     0.038 |
+|   genblk1[9].genblk1[22].fa  |     0.033 |
+|   genblk1[9].genblk1[23].fa  |     0.042 |
+|   genblk1[9].genblk1[24].fa  |     0.037 |
+|   genblk1[9].genblk1[25].fa  |     0.036 |
+|   genblk1[9].genblk1[26].fa  |     0.050 |
+|   genblk1[9].genblk1[27].fa  |     0.039 |
+|   genblk1[9].genblk1[28].fa  |     0.042 |
+|   genblk1[9].genblk1[29].fa  |     0.032 |
+|   genblk1[9].genblk1[2].fa   |     0.040 |
+|   genblk1[9].genblk1[30].fa  |     0.011 |
+|   genblk1[9].genblk1[31].fa  |     0.003 |
+|   genblk1[9].genblk1[3].fa   |     0.047 |
+|   genblk1[9].genblk1[4].fa   |     0.027 |
+|   genblk1[9].genblk1[5].fa   |     0.036 |
+|   genblk1[9].genblk1[6].fa   |     0.055 |
+|   genblk1[9].genblk1[7].fa   |     0.043 |
+|   genblk1[9].genblk1[8].fa   |     0.029 |
+|   genblk1[9].genblk1[9].fa   |     0.041 |
++------------------------------+-----------+
+
+
